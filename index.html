@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+<title>W3.CSS</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="http://allfont.net/allfont.css?fonts=caviar-dreams" rel="stylesheet" type="text/css" />
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:300,600' rel='stylesheet' type='text/css'>
+
+<style>
+
+/* Header Text */
+
+#header{font-family: 'Caviar Dreams', arial;
+          color: rgb(97,97,97);
+          text-indent: 20px;}
+
+#header:hover{color: rgb(233,30,99)}
+
+.header_box{box-shadow: 0px 0px 4px #888888;
+            position: fixed;
+            top: 0; 
+            width: 100%;
+            background-color: white;
+            z-index:5}
+
+
+/* Header Icon */
+
+.header_icon{color: rgb(117,117,117);
+     margin-right: 20px;
+     margin-top: 11px;}
+
+.header_icon:hover{color: rgb(233,30,99)}
+
+.icon_width{width:40px;}
+
+
+/* Side Nav Text */
+
+.sn_text{text-indent: 0px;
+  direction: rtl;
+  text-align: right;
+  font-family: 'Titillium Web', sans-serif;
+font-weight:600;
+  color: white;
+  font-size:20px;
+  opacity:0.7;}
+
+.sn_text:hover{opacity: 1}
+
+.sn_subtext{text-indent: 75px;
+  direction: rtl;
+  text-align: right;
+  font-family: 'Titillium Web', sans-serif;
+font-weight:300;
+  color: white;
+  font-size:20px;
+  opacity:0.6;}
+
+.sn_subtext:hover{opacity: 1}
+
+.sidenav_box{display:none;
+             z-index:10;
+             box-shadow: -1px 0px 25px rgb(50,50,50);
+             background-color: rgb(233,30,99)}
+
+/* Side Nav Icon */
+
+.sn_icon{color: white;
+     opacity:0.7;
+     margin-right: 20px;
+     margin-top: 11px;
+margin-}
+
+.sn_icon:hover{opacity: 1;}
+
+.sn_icon_close{color: white;
+     opacity:0.7;
+     margin-right: 20px;
+     margin-top: 11px;}
+
+.sn_icon_close:hover{opacity: 1;}
+
+/* Main Body Text */
+
+#body_text{margin-left: auto;
+  margin-right: auto;
+  font-family: 'Titillium Web', sans-serif;
+font-weight:300;
+font-size:18px;
+  color: rgb(97,97,97);
+  max-width: 900px;}
+
+h2{  font-family: 'Titillium Web', sans-serif;
+font-weight:600;
+font-size:38px;}
+
+</style>
+
+<body>
+
+<!-- Side Nav  -->
+
+<div class = "w3-half w3-right">
+    <nav class="sidenav_box w3-sidenav w3-half w3-animate-right">
+    
+        <div class="w3-row">
+        <div class="icon_width w3-col w3-right">
+        <i class="sn_icon_close material-icons w3-xlarge w3-right" onclick="w3_close()">close</i></div>
+        <div class="w3-container w3-rest"> <h5 class="header"></h5></div></div>
+
+<div class="w3-row"> <h5 class="header"></h5></div>
+<div class="w3-row"> <h5 class="header"></h5></div>
+
+<!-- Interactive Sketch  -->
+
+<div class="w3-row">
+<div class="icon_width w3-col w3-right">
+<i id="is_icon" class="sn_icon material-icons w3-xlarge w3-right" onclick="is_func()">expand_more</i>
+</div>
+<div class="w3-container w3-rest"><a id="is_text" class="sn_text w3-hover-none w3-right" href="#">Interactive Sketch</a>
+</div>
+</div>
+
+<div class="w3-row"><div id="is_list" class="w3-accordion-content">
+      <div class="w3-row"><a class="sn_subtext w3-hover-none w3-right" href="#">Interactive Sketch 1</a></div>
+      <div class="w3-row"><a class="sn_subtext w3-hover-none w3-right" href="#">Interactive Sketch 2</a></div>
+      <div class="w3-row"><a class="sn_subtext w3-hover-none w3-right" href="#">Interactive Sketch 3</a></div>
+    </div>
+</div>
+
+<!-- Abstraction  -->
+
+<div class="w3-row">
+<div class="icon_width w3-col w3-right">
+<i id="abs_icon" class="sn_icon material-icons w3-xlarge w3-right" onclick="abs_func()">expand_more</i>
+</div>
+<div class="w3-container w3-rest"><a id="abs_text" class="sn_text w3-hover-none w3-right" href="#">Abstraction</a>
+</div>
+</div>
+
+<div class="w3-row"><div id="abs_list" class="w3-accordion-content">
+      <div class="w3-row"><a class="sn_subtext w3-hover-none w3-right" href="#">Abstract 1</a></div>
+      <div class="w3-row"><a class="sn_subtext w3-hover-none w3-right" href="#">Abstract 2</a></div>
+      <div class="w3-row"><a class="sn_subtext w3-hover-none w3-right" href="#">Abstract 3</a></div>
+    </div>
+</div>
+
+<!-- Illustration  -->
+
+<div class="w3-row">
+<div class="icon_width w3-col w3-right">
+<i id="ill_icon" class="sn_icon material-icons w3-xlarge w3-right" onclick="ill_func()">expand_more</i>
+</div>
+<div class="w3-container w3-rest"><a id="ill_text" class="sn_text w3-hover-none w3-right" href="#">Illustration</a>
+</div>
+</div>
+
+<div class="w3-row"><div id="ill_list" class="w3-accordion-content">
+      <div class="w3-row"><a class="sn_subtext w3-hover-none w3-right" href="#">Illustration 1</a></div>
+      <div class="w3-row"><a class="sn_subtext w3-hover-none w3-right" href="#">Illustration 2</a></div>
+      <div class="w3-row"><a class="sn_subtext w3-hover-none w3-right" href="#">Illustration 3</a></div>
+    </div>
+</div>
+
+<!-- Logo  -->
+
+<div class="w3-row">
+<div class="icon_width w3-col w3-right">
+<i id="lo_icon" class="sn_icon material-icons w3-xlarge w3-right" onclick="lo_func()">expand_more</i>
+</div>
+<div class="w3-container w3-rest"><a id="lo_text" class="sn_text w3-hover-none w3-right" href="#">Logo</a>
+</div>
+</div>
+
+<div class="w3-row"><div id="lo_list" class="w3-accordion-content">
+      <div class="w3-row"><a class="sn_subtext w3-hover-none w3-right" href="#">Logo 1</a></div>
+      <div class="w3-row"><a class="sn_subtext w3-hover-none w3-right" href="#">Logo 2</a></div>
+      <div class="w3-row"><a class="sn_subtext w3-hover-none w3-right" href="#">Logo 3</a></div>
+    </div>
+</div>
+
+
+<!-- Facade  -->
+
+<div class="w3-row">
+<div class="icon_width w3-col w3-right">
+<i id="fac_icon" class="sn_icon material-icons w3-xlarge w3-right" onclick="fac_func()">expand_more</i>
+</div>
+<div class="w3-container w3-rest"><a id="fac_text" class="sn_text w3-hover-none w3-right" href="#">Facade</a>
+</div>
+</div>
+
+<div class="w3-row"><div id="fac_list" class="w3-accordion-content">
+      <div class="w3-row"><a class="sn_subtext w3-hover-none w3-right" href="#">Facade 1</a></div>
+      <div class="w3-row"><a class="sn_subtext w3-hover-none w3-right" href="#">Facade 2</a></div>
+      <div class="w3-row"><a class="sn_subtext w3-hover-none w3-right" href="#">Facade 3</a></div>
+    </div>
+</div>
+
+
+<!-- Research  -->
+
+<div class="w3-row">
+<div class="icon_width w3-col w3-right">
+<i id="res_icon" class="sn_icon material-icons w3-xlarge w3-right" onclick="res_func()">expand_more</i>
+</div>
+<div class="w3-container w3-rest"><a id="res_text" class="sn_text w3-hover-none w3-right" href="#">Research</a>
+</div>
+</div>
+
+<div class="w3-row"><div id="res_list" class="w3-accordion-content">
+      <div class="w3-row"><a class="sn_subtext w3-hover-none w3-right" href="#">Research 1</a></div>
+      <div class="w3-row"><a class="sn_subtext w3-hover-none w3-right" href="#">Research 2</a></div>
+      <div class="w3-row"><a class="sn_subtext w3-hover-none w3-right" href="#">Research 3</a></div>
+    </div>
+</div>
+
+<div class="w3-row"> <h5 class="header"></h5></div>
+<div class="w3-row"> <h5 class="header"></h5></div>
+
+
+<div class="w3-row">
+<div class="icon_width w3-col w3-right">
+<i class="sn_icon material-icons w3-xlarge w3-right"></i>
+</div>
+<div class="w3-container w3-rest"><a class="sn_text w3-hover-none w3-right" href="#">About</a>
+</div>
+</div>
+
+<div class="w3-row">
+<div class="icon_width w3-col w3-right">
+<i class="sn_icon material-icons w3-xlarge w3-right"></i>
+</div>
+<div class="w3-container w3-rest"><a class="sn_text w3-hover-none w3-right" href="#">Contact</a>
+</div>
+</div>
+
+</nav>
+</div>
+  <a class="w3-hover-none" href="#">I</a>
+
+
+<!-- Overlay  -->
+
+<div class="w3-overlay w3-animate" style="z-index:9; opacity:0.1" onclick="w3_close()"></div>
+
+
+<!-- Header  -->
+
+<div class="header_box w3-row">
+    <div class="icon_width w3-col w3-right">
+        <i class="header_icon material-icons w3-xlarge w3-right" onclick="w3_open()">menu</i>
+    </div>
+    <div class="w3-rest"> 
+        <h5 id="header">queen<b>BEE</b> art</h5>
+    </div>
+</div>
+
+<!-- Text  -->
+
+<div class="w3-container" style="max-width:900px;margin-left:auto;margin-right:auto;margin-top:80px;>
+<h2 id="topic">Statement</h2>
+<p id="body_text">I think of my installations as unfinished inventories of fragments: objects, drawings, paintings, photographs, and other inventions. They are improvisational sites in which the constructed and the ready-made are used to question our
+making of the world through language and knowledge. My arrangements are schematic, inviting the viewer to move into a space of speculation. I rely on our desires for beauty, poetics and seduction.</p>
+
+<p id="body_text">The work thus far has used the frame of the museum to propose a secret history of modernity, and in the process, point to stereotypes of difference, which are hidden in plain sight. I have found the histories of surrealism and minimalism to be useful in the rearranging of received ideas. The objects I make are placed in the canon of modernist art, in hopes of making visible what is overlooked in the historicizing of the artist. This project has always been grounded in pleasure and aesthetics.</p>
+</div>
+<script>
+function w3_open() {
+    document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+    document.getElementsByClassName("w3-overlay")[0].style.display = "block";
+}
+function w3_close() {
+    document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+    document.getElementsByClassName("w3-overlay")[0].style.display = "none";
+}
+
+function is_func() {
+    var x = document.getElementById("is_list");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+document.getElementById("is_icon").innerHTML= "expand_less";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+document.getElementById("is_icon").innerHTML= "expand_more";
+    }
+}
+
+function abs_func() {
+    var x = document.getElementById("abs_list");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+document.getElementById("abs_icon").innerHTML= "expand_less";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+document.getElementById("abs_icon").innerHTML= "expand_more";
+    }
+}
+
+function ill_func() {
+    var x = document.getElementById("ill_list");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+document.getElementById("ill_icon").innerHTML= "expand_less";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+document.getElementById("ill_icon").innerHTML= "expand_more";
+    }
+}
+
+function lo_func() {
+    var x = document.getElementById("lo_list");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+document.getElementById("lo_icon").innerHTML= "expand_less";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+document.getElementById("lo_icon").innerHTML= "expand_more";
+    }
+}
+
+function fac_func() {
+    var x = document.getElementById("fac_list");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+document.getElementById("fac_icon").innerHTML= "expand_less";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+document.getElementById("fac_icon").innerHTML= "expand_more";
+    }
+}
+
+function res_func() {
+    var x = document.getElementById("res_list");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+document.getElementById("res_icon").innerHTML= "expand_less";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+document.getElementById("res_icon").innerHTML= "expand_more";
+    }
+}
+
+
+</script>
+
+
+</body>
+</html>
